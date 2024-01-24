@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Яндекс</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,initial-scale=1,user-scalable=no">
+    <style>
+        .rectangle {
+            width: 100%;
+            height: 40px;
+            background: lightseagreen;
+        }
+
+        .body_input-focused_yes .rectangle {
+            margin-bottom: -40px;
+        }
+
+        .input {
+            width: 80%;
+            height: 40px;
+            border: 1px solid lightgray;
+        }
+    </style>
+</head>
+<body>
+    <div class="rectangle">just rectangle</div>
+    <textarea class="input" autocomplete="off" autocapitalize="off"></textarea>
+    <script>
+        document.querySelector('.input').addEventListener('focus', (e) => {
+            document.body.classList.add('body_input-focused_yes');
+        });
+    </script>
+</body>
+</html>
